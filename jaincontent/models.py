@@ -124,4 +124,7 @@ class Item(models.Model):
 	link = models.CharField(max_length=254, default="")
 	description =  models.TextField(null=True, blank=True)
 	is_deleted =  models.BooleanField(default=False)
-    
+
+
+	def __unicode__(self):
+		return unicode(self.title)
