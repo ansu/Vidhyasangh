@@ -106,8 +106,9 @@ class SubCategory(models.Model):
 	logo = models.CharField(max_length=254, default="")
 	is_deleted =  models.BooleanField(default=False)
 	order_number = models.IntegerField(default = 100)
-	def __str__(self):
-		return str(self.name)
+	def __unicode__(self):
+		return unicode(self.name)
+
 
 
 
@@ -123,3 +124,4 @@ class Item(models.Model):
 	link = models.CharField(max_length=254, default="")
 	description =  models.TextField(null=True, blank=True)
 	is_deleted =  models.BooleanField(default=False)
+    
