@@ -55,8 +55,8 @@ class Employee(AbstractBaseUser, PermissionsMixin):
     def is_staff(self):
         return self.is_admin
 
-    def __str__(self):
-        return str(self.employee_id)
+    def __unicode__(self):
+        return unicode(self.employee_id)
 
 
 
@@ -84,8 +84,8 @@ class Category(models.Model):
 	order_number = models.IntegerField(default = 100)
 
 
-	def __str__(self):
-		return str(self.name)
+	def __unicode__(self):
+		return unicode(self.name)
 
 
 class SubCategory(models.Model):
@@ -123,4 +123,3 @@ class Item(models.Model):
 	link = models.CharField(max_length=254, default="")
 	description =  models.TextField(null=True, blank=True)
 	is_deleted =  models.BooleanField(default=False)
-   
